@@ -1,0 +1,77 @@
+body {
+    background-color: green;
+}
+
+#watch-div {
+    height: 300px;
+    width:300px;
+    background-color: orange;
+
+    position: relative;
+}
+
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotating2 {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+#watch-hour {
+    position: absolute;
+    top: 50%;
+    /* left: 50%; */
+
+    width: 300px;
+
+    animation: rotating 3600s linear infinite;
+
+    /* background-color: white; */
+}
+
+#hour-left {
+    width: 50%;
+    float:left;
+    background: transparent;
+}
+#hour-right {
+    width: 50%;
+    float:right;
+    background: white;
+    color: white;
+}
+
+
+#minute-left {
+    width: 50%;
+    float:left;
+    background: red;
+}
+#minute-right {
+    width: 50%;
+    float:right;
+    background: black;
+}
+
+#watch-minute {
+    position: absolute;
+    top: 50%;
+    /* left: 50%; */
+
+    width: 300px;
+
+    animation: rotating 60s linear infinite;
+
+    /* background-color: black; */
+}
