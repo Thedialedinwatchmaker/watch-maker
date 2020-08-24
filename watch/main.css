@@ -20,9 +20,14 @@
         height: 100px;
     }
 
+    .image {
+        width: 100%;
+    }
+
 /* Hero */
 
     #hero_img {
         position: relative;
         left: -145%;
     }
+
