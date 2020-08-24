@@ -1,0 +1,17 @@
+#social-media {
+    position: fixed;
+    top: 90%;
+    left: 90%;
+}
+
+.social-media_bar {
+    width: 150px;
+}
+
+.social-media_button {
+    float: left;
+
+    margin: 5px;
+    padding: 5px; 
+    background-color: orange;
+}
