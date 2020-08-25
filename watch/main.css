@@ -31,3 +31,44 @@
         left: -145%;
     }
 
+/* Form */
+
+    input[type=text] {
+        background-color: #EAEAEA;
+        border-color: #EAEAEA;
+        border-radius: 10px;
+        width: 75%;
+    }
+
+    input[type=email] {
+        background-color: #EAEAEA;
+        border-color: #EAEAEA;
+        border-radius: 10px;
+        width: 75%;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    textarea:focus {
+        background-color: white;
+    }
+
+    #message {
+        height: 215px;
+        background-color: #EAEAEA;
+        border-color: #EAEAEA;
+        border-radius: 10px;
+    }
+
+    #btn-contact {
+        background-color: #C4C4C4;
+        border-color: #C4C4C4;
+        border-radius: 10px;
+        transition-duration: 0.1s;
+    }
+
+    #btn-contact:hover {
+        background-color: white;
+    }
