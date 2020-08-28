@@ -31,6 +31,10 @@
         left: -145%;
     }
 
+/* Latest Updates */
+
+
+
 /* Form */
 
     input[type=text] {
@@ -38,6 +42,7 @@
         border-color: #EAEAEA;
         border-radius: 10px;
         width: 75%;
+
     }
 
     input[type=email] {
@@ -51,15 +56,15 @@
         resize: none;
     }
 
-    #message:focus {
-        background-color: white;
-    }
-
     #message {
         height: 215px;
         background-color: #EAEAEA;
         border-color: #EAEAEA;
         border-radius: 10px;
+    }
+
+    #message:focus {
+        background-color: white;
     }
 
     #btn-contact {
