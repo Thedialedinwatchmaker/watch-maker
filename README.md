@@ -3,12 +3,12 @@
 
 ### How to run
 
-# Install node.js
+- Install node.js
 
-# To get the node modules (run once after every pull from master)
-npm init
+- To get the node modules (run once after every pull from master)
+$ npm init
 
-# To run (as dev)
-# nodemon (as dev) allows for live changes to the website
-npm run dev
+- To run (as dev)
+  - nodemon (as dev) allows for live changes to the website
+$ npm run dev
 
