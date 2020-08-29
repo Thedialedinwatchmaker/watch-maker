@@ -1,10 +1,14 @@
-# Boba Time Website
+# Watch Maker Website
 
-## Andy
 
-Im working on boba bunny - I am going to replicate this UI as a functional interface. 
-https://dribbble.com/shots/11126270-Daily-UI-Challenge-Item-Customization-with-Boba-Bunny 
+### How to run
 
-## Gitlab
+# Install node.js
 
-Test
+# To get the node modules (run once after every pull from master)
+npm init
+
+# To run (as dev)
+# nodemon (as dev) allows for live changes to the website
+npm run dev
+
