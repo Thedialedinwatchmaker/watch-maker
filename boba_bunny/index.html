@@ -1,5 +1,38 @@
-Hello, bunnies! 
+<html>
+    <head>
+        <title> Boba Bunny </title>
 
-Implementing The UI of the following
+        <link rel="stylesheet" href="toppings.css">
+    </head>
+    <body>
 
-https://dribbble.com/shots/11126270-Daily-UI-Challenge-Item-Customization-with-Boba-Bunny
+        <div id="toppings">
+            <p>
+                Choose Topping
+            </p>
+            <div class="toppings"> 
+                <img id="toppings-1" onclick="toggleTopping('toppings-1', 1)" src="design/unselected_coconutjelly.png"> 
+            </div>
+            <div class="toppings"> 
+                <img id="toppings-2" onclick="toggleTopping(`toppings-2`, 2)" src="design/unselected_coffeejelly.png">    
+            </div>
+            <div class="toppings"> 
+                <img id="toppings-3" onclick="toggleTopping(`toppings-3`, 3)" src="design/unselected_pearls.png">    
+            </div>
+            <div class="toppings"> 
+                <img id="toppings-4" onclick="toggleTopping(`toppings-4`, 4)" src="design/unselected_rainbowjelly.png">    
+            </div>
+            <div class="toppings"> 
+                <img id="toppings-5" onclick="toggleTopping(`toppings-5`, 5)" src="design/unselected_redbean.png">    
+            </div>
+        </div>
+
+        <div>
+            <a onclick="submitToppings()" href="#"> Submit </a>
+        </div>
+
+
+        <script src="toppings.js"></script>
+
+    </body>
+</html>

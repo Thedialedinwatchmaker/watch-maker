@@ -1,0 +1,79 @@
+/* Bootstrap Modifications */
+
+    .container {
+        max-width: 960px;
+    }
+
+/* Navigation */
+    
+    /* Most of the themes are bootstraped */
+
+    .navbar {
+        /* Has Bootstrap Themes */
+        background-color: white;
+    }
+
+
+/* General Styles */
+
+    .spacebar {
+        height: 100px;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+/* Hero */
+
+    #hero_img {
+        position: relative;
+        left: -145%;
+    }
+
+/* Latest Updates */
+
+
+
+/* Form */
+
+    input[type=text] {
+        background-color: #EAEAEA;
+        border-color: #EAEAEA;
+        border-radius: 10px;
+        width: 75%;
+
+    }
+
+    input[type=email] {
+        background-color: #EAEAEA;
+        border-color: #EAEAEA;
+        border-radius: 10px;
+        width: 75%;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    #message {
+        height: 215px;
+        background-color: #EAEAEA;
+        border-color: #EAEAEA;
+        border-radius: 10px;
+    }
+
+    #message:focus {
+        background-color: white;
+    }
+
+    #btn-contact {
+        background-color: #C4C4C4;
+        border-color: #C4C4C4;
+        border-radius: 10px;
+        transition-duration: 0.1s;
+    }
+
+    #btn-contact:hover {
+        background-color: white;
+    }
