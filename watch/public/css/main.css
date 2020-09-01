@@ -13,10 +13,15 @@
     background-color: white;
 }
 
-    #hero_arrow {
-        width: 50px;
-    }
+#hero_arrow {
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+#video_container {
+}
 
 /* General Styles */
 
@@ -26,6 +31,10 @@
 
 .image {
     width: 100%;
+}
+
+h1 {
+    font-size: 64px;
 }
 
 /* Hero */
