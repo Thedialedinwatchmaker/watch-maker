@@ -16,7 +16,7 @@
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 
-<body>
+<body onload="testTweets()">
 
 <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
 
@@ -146,21 +146,10 @@
     <div class="row">
         <div class="col-sm-6">
             <h2>Latest Updates</h2>
-            <div class="twitter-component" id="test-tweets">Should change this text</div>
             <br>
-            <div class="twitter-component">
-                <blockquote class="twitter-tweet"><a
-                        href="https://twitter.com/chestCervant/status/1302155140460232705"></a>
-                </blockquote>
-            </div>
-            <div class="twitter-component">
-                <blockquote class="twitter-tweet"><a
-                        href="https://twitter.com/chestCervant/status/1302140686846668800"></a></blockquote>
-            </div>
-            <div class="twitter-component">
-                <blockquote class="twitter-tweet"><a
-                        href="https://twitter.com/chestCervant/status/1302140668278534144"></a></blockquote>
-            </div>
+            <div class="twitter-component" id="test-tweets-1">Should change this text 1</div>
+            <div class="twitter-component" id="test-tweets-2">Should change this text 2</div>
+            <div class="twitter-component" id="test-tweets-3">Should change this text 3</div>
 
             <form id="tweet-form">
                 <button type="submit" class="btn btn-action" id="btn-tweets">Update Tweet</button>
@@ -266,32 +255,78 @@
         $("#tweet-form").submit(function (event) {
             event.preventDefault();
 
-            $('#test-tweets').html('                <blockquote class="twitter-tweet"><a\n' +
-                '                        href="https://twitter.com/chestCervant/status/1302155140460232705"></a>\n' +
-                '                </blockquote>');
+            $.ajax({
+                method: 'get',
+                url: 'getTweets',
+                contentType: 'application/json',
+                success: function (data) {
+                    $('#test-tweets-1').html('<blockquote class="twitter-tweet"><a id="test-tweets-href-1" \n' +
+                            'href=""</a>\n' +
+                            '</blockquote>');
+                    let href_link_1 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[0];
+                    $('#test-tweets-href-1').attr('href', href_link_1);
 
-            twttr.widgets.load();
-            // console.log('test')
-            // $.ajax({
-            //     method: 'get',
-            //     url: 'getTweets',
-            //     contentType: 'application/json',
-            //     success: function (data) {
-            //         // $('#response-tweets').attr('type', 'image');
-            //         // $('#response-tweets').attr('src', data.icon);
-            //         // $('#test-tweets').attr('href', 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids);
-            //         $('#test-tweets').html('<a href="https://twitter.com/chestCervant/status/1302155140460232705"></a>');
-            //
-            //         twttr.widgets.load();
-            //     },
-            //     error: function () {
-            //
-            //     }
-            //
-            // });
+                    $('#test-tweets-2').html('<blockquote class="twitter-tweet"><a id="test-tweets-href-2" \n' +
+                        'href=""</a>\n' +
+                        '</blockquote>');
+                    let href_link_2 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[1];
+                    $('#test-tweets-href-2').attr('href', href_link_2);
+
+                    $('#test-tweets-3').html('<blockquote class="twitter-tweet"><a id="test-tweets-href-3" \n' +
+                        'href=""</a>\n' +
+                        '</blockquote>');
+                    let href_link_3 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[2];
+                    $('#test-tweets-href-3').attr('href', href_link_3);
+
+                    twttr.widgets.load();
+                },
+                error: function () {
+
+                }
+
+            });
 
         });
     });
+</script>
+<script>
+    function testTweets() {
+        $("#tweet-form").submit(function (event) {
+            event.preventDefault();
+
+            $.ajax({
+                method: 'get',
+                url: 'getTweets',
+                contentType: 'application/json',
+                success: function (data) {
+                    $('#test-tweets-1').html('<blockquote class="twitter-tweet"><a id="test-tweets-href-1" \n' +
+                        'href=""</a>\n' +
+                        '</blockquote>');
+                    let href_link_1 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[0];
+                    $('#test-tweets-href-1').attr('href', href_link_1);
+
+                    $('#test-tweets-2').html('<blockquote class="twitter-tweet"><a id="test-tweets-href-2" \n' +
+                        'href=""</a>\n' +
+                        '</blockquote>');
+                    let href_link_2 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[1];
+                    $('#test-tweets-href-2').attr('href', href_link_2);
+
+                    $('#test-tweets-3').html('<blockquote class="twitter-tweet"><a id="test-tweets-href-3" \n' +
+                        'href=""</a>\n' +
+                        '</blockquote>');
+                    let href_link_3 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[2];
+                    $('#test-tweets-href-3').attr('href', href_link_3);
+
+                    twttr.widgets.load();
+                },
+                error: function () {
+
+                }
+
+            });
+
+        });
+    }
 </script>
 </body>
 </html>

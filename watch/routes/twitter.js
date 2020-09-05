@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
                 latest_updates_ids.push(tweets[i].id_str);
             }
             console.log(latest_updates_ids[0]);
-            res.send({success: true, icon: './checkmark.png', latest_updates_ids: latest_updates_ids[0]});
+            res.send({success: true, icon: './checkmark.png', latest_updates_ids: latest_updates_ids});
         } else {
             console.log(err);
             res.send({error: true, icon: './cross.png'})
