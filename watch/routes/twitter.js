@@ -24,8 +24,6 @@ router.get('/', (req, res) => {
     let latest_updates_ids = [];
     T.get('statuses/user_timeline', params, function (err, tweets, response) {
         if (!err) {
-            // console.log(tweets);
-            // console.log(typeof tweets);
             // console.log(tweets[1].id);
             for (let i = 0; i < LATEST_UPDATES_COUNT; i++) {
                 console.log(tweets[i]);
