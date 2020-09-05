@@ -12,6 +12,8 @@
     <!-- Our CSS -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/social-media.css">
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -144,14 +146,27 @@
     <div class="row">
         <div class="col-sm-6">
             <h2>Latest Updates</h2>
+            <div class="twitter-component" id="test-tweets">Should change this text</div>
             <br>
-            <div id="twitter-block-1"></div>
-            <div id="twitter-block-2"></div>
+            <div class="twitter-component">
+                <blockquote class="twitter-tweet"><a
+                        href="https://twitter.com/chestCervant/status/1302155140460232705"></a>
+                </blockquote>
+            </div>
+            <div class="twitter-component">
+                <blockquote class="twitter-tweet"><a
+                        href="https://twitter.com/chestCervant/status/1302140686846668800"></a></blockquote>
+            </div>
+            <div class="twitter-component">
+                <blockquote class="twitter-tweet"><a
+                        href="https://twitter.com/chestCervant/status/1302140668278534144"></a></blockquote>
+            </div>
 
             <form id="tweet-form">
                 <button type="submit" class="btn btn-action" id="btn-tweets">Update Tweet</button>
                 <label for="response-tweets"></label>
                 <input type="hidden" id="response-tweets" name="response-tweets" readonly>
+<!--                <input type="hidden" id="test-tweets" name="test-tweets" readonly>-->
             </form>
         </div> <!-- Latest Updates -->
         <div class="col-sm-6">
@@ -251,16 +266,30 @@
         $("#tweet-form").submit(function (event) {
             event.preventDefault();
 
-            $.ajax({
-                method: 'get',
-                url: 'getTweets',
-                contentType: 'application/json',
-                success: function (data) {
-                }
+            $('#test-tweets').html('                <blockquote class="twitter-tweet"><a\n' +
+                '                        href="https://twitter.com/chestCervant/status/1302155140460232705"></a>\n' +
+                '                </blockquote>');
 
-            });
+            twttr.widgets.load();
+            // console.log('test')
+            // $.ajax({
+            //     method: 'get',
+            //     url: 'getTweets',
+            //     contentType: 'application/json',
+            //     success: function (data) {
+            //         // $('#response-tweets').attr('type', 'image');
+            //         // $('#response-tweets').attr('src', data.icon);
+            //         // $('#test-tweets').attr('href', 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids);
+            //         $('#test-tweets').html('<a href="https://twitter.com/chestCervant/status/1302155140460232705"></a>');
+            //
+            //         twttr.widgets.load();
+            //     },
+            //     error: function () {
+            //
+            //     }
+            //
+            // });
 
-            console.log('test')
         });
     });
 </script>
