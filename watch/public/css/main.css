@@ -80,18 +80,18 @@ textarea {
     background-color: white;
 }
 
-#btn-contact {
+.btn-action {
     background-color: #C4C4C4;
     border-color: #C4C4C4;
     border-radius: 10px;
     transition-duration: 0.1s;
 }
 
-#btn-contact:hover {
+.btn-action:hover {
     background-color: white;
 }
 
-#response-contact {
+#response-contact, #response-tweets {
     width: 20px;
     height: 20px;
     pointer-events: none
