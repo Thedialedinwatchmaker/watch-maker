@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // Use routes
 app.use('/send', require('./routes/contact'));
-app.use('/getTweets', require('./routes/twitter'));
+// app.use('/getTweets', require('./routes/twitter'));
 
 // Set __dirname/public as static folder
 app.use(express.static(path.join(__dirname, 'public')));

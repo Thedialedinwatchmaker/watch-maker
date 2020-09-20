@@ -16,3 +16,7 @@ $ npm init
 
 $ npm run dev
 
+## Andy's Notes 
+
+Facebook Logo very different from other logos. 
+Make Video 100vh.
