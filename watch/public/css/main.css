@@ -1,26 +1,22 @@
-/* Bootstrap Modifications */
+html {
+    scroll-behavior: smooth;
+    position: relative;
+    min-height: 100%;
+}
 
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.5s;
+}
+
+/* Bootstrap Modifications */
 .container {
     max-width: 960px;
-}
-
-/* Navigation */
-
-/* Most of the themes are bootstraped */
-
-.navbar {
-    /* Has Bootstrap Themes */
-    background-color: white;
-}
-
-#hero_arrow {
-    width: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#video_container {
 }
 
 /* General Styles */
@@ -44,55 +40,9 @@ h1 {
     left: -145%;
 }
 
-/* Latest Updates */
-
-
-
-/* Form */
-
-input[type=text] {
-    background-color: #EAEAEA;
-    border-color: #EAEAEA;
-    border-radius: 10px;
-    width: 75%;
-
-}
-
-input[type=email] {
-    background-color: #EAEAEA;
-    border-color: #EAEAEA;
-    border-radius: 10px;
-    width: 75%;
-}
-
-textarea {
-    resize: none;
-}
-
-#message {
-    height: 215px;
-    background-color: #EAEAEA;
-    border-color: #EAEAEA;
-    border-radius: 10px;
-}
-
-#message:focus {
-    background-color: white;
-}
-
-.btn-action {
-    background-color: #C4C4C4;
-    border-color: #C4C4C4;
-    border-radius: 10px;
-    transition-duration: 0.1s;
-}
-
-.btn-action:hover {
-    background-color: white;
-}
-
-#response-contact, #response-tweets {
-    width: 20px;
-    height: 20px;
-    pointer-events: none
+#hero_arrow {
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
