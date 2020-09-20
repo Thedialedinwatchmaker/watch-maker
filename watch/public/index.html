@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/footer.css">
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -141,12 +143,12 @@
                 <div class="twitter-component" id="latest-tweet-2">No more tweets available</div>
                 <div class="twitter-component" id="latest-tweet-3">No more tweets available</div>
 
-                <!--            <form id="tweet-form">-->
-                <!--                <button type="submit" class="btn btn-action" id="btn-tweets">Update Tweet</button>-->
-                <!--                <label for="response-tweets"></label>-->
-                <!--                <input type="hidden" id="response-tweets" name="response-tweets" readonly>-->
-                <!--                &lt;!&ndash;                <input type="hidden" id="test-tweets" name="test-tweets" readonly>&ndash;&gt;-->
-                <!--            </form>-->
+<!--                            <form id="tweet-form">-->
+<!--                                <button type="submit" class="btn btn-action" id="btn-tweets">Update Tweet</button>-->
+<!--                                <label for="response-tweets"></label>-->
+<!--                                <input type="hidden" id="response-tweets" name="response-tweets" readonly>-->
+<!--                                &lt;!&ndash;                <input type="hidden" id="test-tweets" name="test-tweets" readonly>&ndash;&gt;-->
+<!--                            </form>-->
             </div> <!-- Latest Updates -->
             <div class="spacebar"></div>
             <div class="col-sm-6">
@@ -197,8 +199,7 @@
     <div id="subscription" class="container h-100">
         <div class="row align-items-center h-100">
             <div class="col-8 mx-auto">
-                Begin Mailchimp Signup Form
-                <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<!--                <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">-->
                 <!--<style type="text/css">
                         #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
                     Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
@@ -212,10 +213,6 @@
                                 <label for="mce-EMAIL">Email Address</label>
                                 <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
                             </div>
-                        <!-- <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div> -->
                             <div id="mce-responses" class="clear">
                                 <div class="response" id="mce-error-response" style="display:none"></div>
                                 <div class="response" id="mce-success-response" style="display:none"></div>
@@ -268,53 +265,54 @@
                         $('#response-contact').attr('src', data.icon);
                     }
                 });
+                console.log('test')
             });
-
-            $(document).ready(function () {
-                $("#tweet-form").submit(function (event) {
-                    event.preventDefault();
-
-                    getTweets();
-
-                });
-            });
-
-            function getTweets() {
-                $.ajax({
-                    method: 'get',
-                    url: 'getTweets',
-                    contentType: 'application/json',
-                    success: function (data) {
-                        $('#latest-tweet-1').html('<blockquote class="twitter-tweet"><a id="latest-tweet-a-1" \n' +
-                            'href=""</a>\n' +
-                            '</blockquote>');
-                        let href_link_1 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[0];
-                        $('#latest-tweet-a-1').attr('href', href_link_1);
-
-                        $('#latest-tweet-2').html('<blockquote class="twitter-tweet"><a id="latest-tweet-a-2" \n' +
-                            'href=""</a>\n' +
-                            '</blockquote>');
-                        let href_link_2 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[1];
-                        $('#latest-tweet-a-2').attr('href', href_link_2);
-
-                        $('#latest-tweet-3').html('<blockquote class="twitter-tweet"><a id="latest-tweet-a-3" \n' +
-                            'href=""</a>\n' +
-                            '</blockquote>');
-                        let href_link_3 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[2];
-                        $('#latest-tweet-a-3').attr('href', href_link_3);
-
-                        twttr.widgets.load();
-                    },
-                    error: function () {
-
-                    }
-
-                });
-            }
-
-            getTweets();
         });
+
+        $(document).ready(function () {
+            $("#tweet-form").submit(function (event) {
+                event.preventDefault();
+
+                getTweets();
+
+            });
+        });
+
+        function getTweets() {
+            $.ajax({
+                method: 'get',
+                url: 'getTweets',
+                contentType: 'application/json',
+                success: function (data) {
+                    $('#latest-tweet-1').html('<blockquote class="twitter-tweet"><a id="latest-tweet-a-1" \n' +
+                        'href=""</a>\n' +
+                        '</blockquote>');
+                    let href_link_1 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[0];
+                    $('#latest-tweet-a-1').attr('href', href_link_1);
+
+                    $('#latest-tweet-2').html('<blockquote class="twitter-tweet"><a id="latest-tweet-a-2" \n' +
+                        'href=""</a>\n' +
+                        '</blockquote>');
+                    let href_link_2 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[1];
+                    $('#latest-tweet-a-2').attr('href', href_link_2);
+
+                    $('#latest-tweet-3').html('<blockquote class="twitter-tweet"><a id="latest-tweet-a-3" \n' +
+                        'href=""</a>\n' +
+                        '</blockquote>');
+                    let href_link_3 = 'https://twitter.com/chestCervant/status/' + data.latest_updates_ids[2];
+                    $('#latest-tweet-a-3').attr('href', href_link_3);
+
+                    twttr.widgets.load();
+                },
+                error: function () {
+
+                }
+
+            });
+        }
+
+        getTweets();
     </script>
-`
+
 </body>
 </html>
