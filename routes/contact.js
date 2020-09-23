@@ -33,7 +33,7 @@ router.post('/', (req, res) => {
     sgMail.send(msg).then(() => {
         console.log('Message sent');
         console.log(req.body.name);
-        res.send({success: true, icon: './checkmark.png'});
+        res.send({success: true, icon: './assets/checkmark.png'});
     }).catch((error) => {
         console.log(error.response.body)
     })
