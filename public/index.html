@@ -255,17 +255,18 @@
                 var email1 = $('#email').val();
                 var message1 = $('#message').val();
 
+                console.log('test')
+                console.log(email1)
                 $.ajax({
                     method: 'post',
                     url: 'send',
-                    data: JSON.stringify({name1: name1, email1: email1, message1: message1}),
+                    data: JSON.stringify({name: name1, email: email1, message: message1}),
                     contentType: 'application/json',
                     success: function (data) {
                         $('#response-contact').attr('type', 'image');
                         $('#response-contact').attr('src', data.icon);
                     }
                 });
-                console.log('test')
             });
         });
 
