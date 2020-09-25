@@ -231,6 +231,16 @@
 
     <div class="spacebar"></div>
 
+    <div id="instagram" class="container h-100">
+        <div id="instafeed"></div>
+
+        <script type="text/javascript">
+            var feed = new Instafeed({
+                accessToken: process.env.INSTAGRAM_TOKEN
+            });
+            feed.run();
+        </script>
+    </div>
     <footer id="footer" class="footer">
         <div class="container d-flex justify-content-center">
             <a href="#"><img class="footer-sm" src="assets/socialMedia/facebook.png"></a>
