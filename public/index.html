@@ -233,6 +233,10 @@
 
     <div id="instagram" class="container h-100">
         <div id="instafeed"></div>
+        <dl>
+            <dt>Default JS inclusion: <strong>InstagramToken</strong></dt>
+            <dd><code id="js-default"></code></dd>
+        </dl>
     </div>
 
     <footer id="footer" class="footer">
@@ -259,7 +263,14 @@
         });
         feed.run();
     </script>
+    <script>
+        (function(){
+            //Basic use: Just include the script and then access the token as InstagramToken
+            document.querySelector('#js-default').innerHTML = InstagramToken;
 
+           
+        })();
+        </script>
     <!-- Contact and Updates Scripts -->
     <script>
         $(document).ready(function () {
