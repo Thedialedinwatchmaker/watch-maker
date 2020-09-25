@@ -236,6 +236,9 @@
 
         <script type="text/javascript">
             var feed = new Instafeed({
+                get: 'user',
+                target: 'instafeed',
+                resolution: 'low_resolution',
                 accessToken: process.env.INSTAGRAM_TOKEN
             });
             feed.run();
