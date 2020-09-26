@@ -258,17 +258,17 @@
     <script src='https://watch-token-cc.herokuapp.com/token.js'></script>
     <script type="text/javascript" src="../instafeed.min.js"></script>
     <script type="text/javascript">
-
+        var feed = new Instafeed({
+            accessToken: InstagramToken
+        });
+        feed.run();
+        console.log('feed')
+        console.log(feed)
     </script>
     <script>
         (function(){
             //Basic use: Just include the script and then access the token as InstagramToken
             document.querySelector('#js-default').innerHTML = InstagramToken;
-            var feed = new Instafeed({
-                accessToken: InstagramToken
-            });
-            feed.run();
-
         })();
         </script>
     <!-- Contact and Updates Scripts -->
