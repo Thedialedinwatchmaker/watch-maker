@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title> The Dialed In Watchmaker </title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gallery.css">
+
+</head>
+<body>
+
+    <div class="spacebar"></div>
+
+    <div id="about" class="container">
+        <div class="row">
+
+            <div class="col-sm-6 align-self-center">
+                <img class="image" src="assets/about_me.jpg">
+            </div> <!-- Hero Clock -->
+
+            <div class="col-sm-6 align-self-center">
+
+                <h2> About Me </h2>
+                <br>
+                <p>
+                    My name is Howie Woiwod and I am a watchmaker. I studied this craft at the École nationale de
+                    l'horlogerie in Trois Rivieres, Quebec and graduated as a certified Watchmaker December of 2016. Such a
+                    great experience because I got some fantastic hands-on training at a world class facility.
+                </p>
+                <p> I got my real world experience working for Jason at Roldorf and Co. in Vancouver for 3 great years.
+                    Having the opportunity to work for an independent was extremely valuable as I have seen and worked on
+                    many types of watches, like Rolex and Omega and all the common household brands plus many more. I
+                    enthusiastically faced plenty of challenges.
+                </p>
+                <p>
+                    I was also part of the design and manufacturing of the Halios Seaforth "Roldorf Edition" with Jason
+                    Gallop of Roldorf and Co and Jason Lim of Halios watches. This was an incredible ride and a dream come
+                    true. You can read about this experience and others on my blog page.
+                </p>
+                <p>
+                    My goal is to serve the watch community with a loving touch and an open heart. Watches serve so many
+                    purposes in our lives and each one has a unique story. I'd like to bridge the gap that many watchmakers
+                    have with clients by offering a customer based web experience using video to it's potential.
+                </p>
+
+            </div> <!-- Hero Text -->
+
+        </div>
+    </div> <!-- How It Works -->
+
+    <div class="spacebar"></div>
+
+    <div id="instagram" class="container">
+        <div id="instafeed"></div>
+    </div>
+
+    <!-- Instagram Feed Scripts -->
+    <script src='https://watch-token-cc.herokuapp.com/token.js'></script>
+    <script src="./instafeed.min.js"></script>
+    <script>
+        var feed = new Instafeed({
+            accessToken: InstagramToken,
+            template: '<a href="{{link}}"><img class="image"  src="{{image}}" /></a>'
+        });
+        feed.run();
+    </script>
+</body>
+</html>

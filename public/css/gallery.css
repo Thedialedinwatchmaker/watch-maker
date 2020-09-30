@@ -1,0 +1,35 @@
+
+#instafeed {
+    text-align: center;
+
+}
+#instafeed a {
+    margin-top: 10px;
+    width: 45%;
+    display: inline-block;
+    margin-right: 10px;
+    object-fit: cover;
+    background-size: cover;
+
+}
+
+#instafeed a .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+#instafeed a:hover .image {
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 768px) {
+    #instafeed a {
+        width: 100%;
+        margin-right: 20px;
+    }
+}

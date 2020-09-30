@@ -1,11 +1,14 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const app = express();
 require('dotenv').config();
 
 // Middleware Body Parser
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(cors())
 
 // Use routes
 app.use('/send', require('./routes/contact'));
