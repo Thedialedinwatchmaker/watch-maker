@@ -1,7 +1,16 @@
+
+#instafeed {
+    text-align: center;
+
+}
 #instafeed a {
-    padding: 10px;
-    position: relative;
-    width: 50%;
+    margin-top: 10px;
+    width: 45%;
+    display: inline-block;
+    margin-right: 10px;
+    object-fit: cover;
+    background-size: cover;
+
 }
 
 #instafeed a .image {
@@ -14,5 +23,13 @@
 }
 
 #instafeed a:hover .image {
-    transform: scale(1.03);
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 768px) {
+    #instafeed a {
+        width: 100%;
+        margin-right: 20px;
+    }
 }
