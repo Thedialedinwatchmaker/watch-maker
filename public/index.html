@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/gallery.css">
 
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
@@ -74,7 +73,7 @@
 
     <div id="video" class="container">
         <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K6l4xdGAY9w" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LY35ffkWFiw" allowfullscreen></iframe>
         </div>
     </div> <!-- Video -->
 
@@ -153,7 +152,7 @@
             </div> <!-- Latest Updates -->
             <div class="spacebar"></div>
             <div class="col-sm-6">
-                <h2>Send a Message!</h2>
+                <h2>Contact Me!</h2>
                 <br>
                 <form id="contact-form">
                     <div class="form-group">
@@ -172,7 +171,12 @@
                     <label for="response-contact"></label>
                     <input type="hidden" id="response-contact" name="response-contact" readonly>
                 </form>
+                <br>
+                <p>
+                    Beaumont Studios. 326 West 5 ave, Vancouver<br>514-688-5100
+                </p>
             </div> <!-- Email form -->
+
         </div>
     </div> <!-- Contact -->
 
@@ -204,7 +208,7 @@
                 <!--<style type="text/css">
                         #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
                     Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. 
+                        We recommend moving this block and the preceding CSS link to the HEAD of your HTML file.
                     </style> -->
                 <div id="mc_embed_signup">
                     <form action="https://gmail.us2.list-manage.com/subscribe/post?u=28eaead70afd479bbb401771e&amp;id=f6a6f17b24" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -232,9 +236,7 @@
 
     <div class="spacebar"></div>
 
-    <div id="instagram" class="container">
-        <div id="instafeed"></div>
-    </div>
+
 
     <footer id="footer" class="footer">
         <div class="container d-flex justify-content-center">
@@ -251,16 +253,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <!-- Instagram Feed Scripts -->
-    <script src='https://watch-token-cc.herokuapp.com/token.js'></script>
-    <script src="./instafeed.min.js"></script>
-    <script>
-        var feed = new Instafeed({
-            accessToken: InstagramToken,
-            template: '<a href="{{link}}"><img class="image"  src="{{image}}" /></a>'
-        });
-        feed.run();
-    </script>
+
 
     <!-- Contact and Updates Scripts -->
     <script>
@@ -271,8 +264,6 @@
                 var email1 = $('#email').val();
                 var message1 = $('#message').val();
 
-                console.log('test')
-                console.log(email1)
                 $.ajax({
                     method: 'post',
                     url: 'send',

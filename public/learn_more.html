@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gallery.css">
+
 </head>
 <body>
 
@@ -26,7 +28,7 @@
         <div class="row">
 
             <div class="col-sm-6 align-self-center">
-                <img class="image" src="assets/profile.png">
+                <img class="image" src="assets/about_me.jpg">
             </div> <!-- Hero Clock -->
 
             <div class="col-sm-6 align-self-center">
@@ -58,5 +60,22 @@
 
         </div>
     </div> <!-- How It Works -->
+
+    <div class="spacebar"></div>
+
+    <div id="instagram" class="container">
+        <div id="instafeed"></div>
+    </div>
+
+    <!-- Instagram Feed Scripts -->
+    <script src='https://watch-token-cc.herokuapp.com/token.js'></script>
+    <script src="./instafeed.min.js"></script>
+    <script>
+        var feed = new Instafeed({
+            accessToken: InstagramToken,
+            template: '<a href="{{link}}"><img class="image"  src="{{image}}" /></a>'
+        });
+        feed.run();
+    </script>
 </body>
 </html>
