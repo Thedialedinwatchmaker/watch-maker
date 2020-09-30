@@ -1,48 +1,33 @@
-html {
-    scroll-behavior: smooth;
-    position: relative;
-    min-height: 100%;
-}
-
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
-}
-
-*{
-    font-family: 'Roboto', sans-serif;
-    transition: all 0.5s;
-}
+/* Main Styles */
 
 /* Bootstrap Modifications */
-.container {
-    max-width: 960px;
-}
+    .container { max-width: 960px; }
 
-/* General Styles */
+    /* Helps with scrollspy navigation */
+    html {
+        scroll-behavior: smooth;
+        position: relative;
+        min-height: 100%;
+    }
 
-.spacebar {
-    height: 100px;
-}
 
-.image {
-    width: 100%;
-}
+/* General Styles  */
 
-h1 {
-    font-size: 64px;
-}
+    /* Margin bottom by footer height */
+    body { margin-bottom: 60px; }
 
-/* Hero */
+    *{
+        font-family: 'Roboto', sans-serif;
+        transition: all 0.5s;
+    }
 
-#hero_img {
-    position: relative;
-    left: -145%;
-}
+    img { width: 100%; }
+    h1 { font-size: 64px; }
+    h2 { font-size: 48px; }
 
-#hero_arrow {
-    width: 50px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+    /* Spacebar - Special padding element that helps with bootstrap navigation issues */
+    .spacebar { height: 100px; }
+
+    /* Services */
+
+    .card:hover { box-shadow: 5px 5px 2px grey; }
