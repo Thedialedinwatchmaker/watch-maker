@@ -4,6 +4,14 @@ const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 router.post('/', (req, res) => {
+    console.log('Posting');
+
+    console.log(req);
+    console.log('Body');
+
+    console.log(req.body);
+    console.log(req.body.name);
+
     const output = `
         <p>You have a new contact request</p>
         <h3>Contact details</h3>
@@ -24,7 +32,8 @@ router.post('/', (req, res) => {
 
     sgMail.send(msg).then(() => {
         console.log('Message sent');
-        res.send({success: true, icon: './checkmark.png'});
+        console.log(req.body.name);
+        res.send({success: true, icon: './assets/checkmark.png'});
     }).catch((error) => {
         console.log(error.response.body)
     })

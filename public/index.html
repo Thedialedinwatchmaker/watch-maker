@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="css/hero.css">
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gallery.css">
+
 
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
@@ -58,10 +60,10 @@
             </div> <!-- Hero Clock -->
 
             <div id="hero_right" class="col col-md-5  align-self-center">
-                <h1> 
-                    The<br> 
+                <h1>
+                    The<br>
                     Dialed In<br>
-                    Watchmaker 
+                    Watchmaker
                 </h1>
                 <h4>Vancouver's very own "Virtual Watchmaker"</h4>
                 <br>
@@ -94,7 +96,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Battery, crystals and bracelet adjustments</h5>
                         <p class="card-text">
-                            If you think your watch just needs a new battery bracelet adjustment or a new crystal, no problem. 
+                            If you think your watch just needs a new battery bracelet adjustment or a new crystal, no problem.
                             I only use high quality swiss made Renata cells.
                         </p>
                     </div>
@@ -119,12 +121,12 @@
                     <div class="card-body">
                         <h5 class="card-title">Full Service Work</h5>
                         <p class="card-text">
-                            This is the nitty gritty. Mechanical watches need tune ups just like cars. 
-                            It may be time for your valued timepiece to get that timely check up 
+                            This is the nitty gritty. Mechanical watches need tune ups just like cars.
+                            It may be time for your valued timepiece to get that timely check up
                             and overhaul to keep it running properly for years to come.
                         </p>
                     </div>
-                </div> 
+                </div>
             </div> <!-- Col -->
 
         </div> <!-- Row -->
@@ -134,7 +136,7 @@
     <div id="video" class="container">
         <div class="spacebar"></div>
         <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K6l4xdGAY9w" allowfullscreen></iframe>
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LY35ffkWFiw" allowfullscreen></iframe>
         </div>
     </div> <!-- Video -->
 
@@ -224,7 +226,7 @@
             <div class="spacebar"></div>
 
             <div class="col-sm-6">
-                <h2>Send a Message!</h2>
+                <h2>Contact Me!</h2>
                 <br>
                 <form id="contact-form">
                     <div class="form-group">
@@ -277,6 +279,61 @@
         <div class="spacebar"></div>
     </div> <!-- subscription -->
 
+
+    <div id="about" class="container">
+        <div class="row">
+
+            <div class="col-sm-6 align-self-center">
+                <img class="image" src="assets/about_me.jpg">
+            </div> <!-- Hero Clock -->
+
+            <div class="col-sm-6 align-self-center">
+
+                <h2> About Me </h2>
+                <br>
+                <p>
+                    My name is Howie Woiwod and I am a watchmaker. I studied this craft at the École nationale de
+                    l'horlogerie in Trois Rivieres, Quebec and graduated as a certified Watchmaker December of 2016. Such a
+                    great experience because I got some fantastic hands-on training at a world class facility.
+                </p>
+                <p> I got my real world experience working for Jason at Roldorf and Co. in Vancouver for 3 great years.
+                    Having the opportunity to work for an independent was extremely valuable as I have seen and worked on
+                    many types of watches, like Rolex and Omega and all the common household brands plus many more. I
+                    enthusiastically faced plenty of challenges.
+                </p>
+                <p>
+                    I was also part of the design and manufacturing of the Halios Seaforth "Roldorf Edition" with Jason
+                    Gallop of Roldorf and Co and Jason Lim of Halios watches. This was an incredible ride and a dream come
+                    true. You can read about this experience and others on my blog page.
+                </p>
+                <p>
+                    My goal is to serve the watch community with a loving touch and an open heart. Watches serve so many
+                    purposes in our lives and each one has a unique story. I'd like to bridge the gap that many watchmakers
+                    have with clients by offering a customer based web experience using video to it's potential.
+                </p>
+
+            </div> <!-- Hero Text -->
+
+        </div>
+    </div> <!-- How It Works -->
+
+    <div class="spacebar"></div>
+
+    <div id="instagram" class="container">
+        <div id="instafeed"></div>
+    </div>
+
+    <!-- Instagram Feed Scripts -->
+    <script src='https://watch-token-cc.herokuapp.com/token.js'></script>
+    <script src="./instafeed.min.js"></script>
+    <script>
+        var feed = new Instafeed({
+            accessToken: InstagramToken,
+            template: '<a href="{{link}}"><img class="image"  src="{{image}}" /></a>'
+        });
+        feed.run();
+    </script>
+
     <footer id="footer">
         <div class="container">
             <br>
@@ -312,7 +369,7 @@
                 $.ajax({
                     method: 'post',
                     url: 'send',
-                    data: JSON.stringify({name1: name1, email1: email1, message1: message1}),
+                    data: JSON.stringify({name: name1, email: email1, message: message1}),
                     contentType: 'application/json',
                     success: function (data) {
                         $('#response-contact').attr('type', 'image');
