@@ -17,7 +17,7 @@
 @media screen and (min-width: 769px) {
 
     #hero { height: 100vh; padding: 0; }
-    #hero > .row { height: 100%; }
+    #hero > .row { height: 100%; width: 100%; }
     #desktop_hero_image { width: auto; height: 100%; }
     #mobile_hero_image { display: none; }
     

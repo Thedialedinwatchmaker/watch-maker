@@ -20,14 +20,120 @@
         font-family: 'Roboto', sans-serif;
         transition: all 0.5s;
     }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Merriweather', serif;
+    }
 
     img { width: 100%; }
     h1 { font-size: 64px; }
-    h2 { font-size: 48px; }
+    @media screen and (max-width: 768px) {
+        h1 { font-size: 3em; }
+    } /* Mobile */
 
-    /* Spacebar - Special padding element that helps with bootstrap navigation issues */
+    h2 { font-size: 48px; }
+    
+    span {
+        color: grey;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+
+/* Titles */
+    .titles {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+/* Spacebar - Special padding element that helps with bootstrap navigation issues */
     .spacebar { height: 100px; }
 
-    /* Services */
 
-    .card:hover { box-shadow: 5px 5px 2px grey; }
+/* Buttons */
+
+    .button {
+        background-color: transparent;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+    } .button:hover {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .button-orange {
+        border: 1px solid black;
+        color: black;
+    } .button-orange:hover {
+        background-color: #F15A24;
+        border-color: #F15A24;
+        color: white;
+    }
+
+    .button-black {
+        border: 1px solid white;
+        color: white;
+    } .button-black:hover {
+        border-color: black;
+        background-color: black;
+        color: white;
+    }
+
+/* Section Specific */
+
+@media screen and (max-width: 768px) {
+
+} /* Mobile */
+@media screen and (min-width: 769px) {
+
+} /* Desktop */
+
+
+/* Repair */
+@media screen and (min-width: 769px) {
+    #repair-title {
+        padding-left: 100px;
+    }    
+} /* Desktop */
+
+
+
+/* Appointment */
+
+    #appointment {
+        background-image: url("../assets/red.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
+    #appointment-layer {
+        padding: 100px 0;
+        background-color: rgba(241, 91, 36, 0.8);
+        color: white;
+    }
+
+    #appointment-titles {
+        text-align: center;
+    }
+    
+
+/* About */
+
+    #about {
+        background-image: url("../assets/about_me.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+    }
+
+    #about-layer {
+        padding: 100px 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+    }
