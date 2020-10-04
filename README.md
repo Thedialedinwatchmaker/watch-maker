@@ -15,8 +15,3 @@ $ npm init
   - Note: nodemon (as dev) allows for live changes to the website
 
 $ npm run dev
-
-## Andy's Notes 
-
-Facebook Logo very different from other logos. 
-Make Video 100vh.
