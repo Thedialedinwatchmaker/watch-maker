@@ -12,3 +12,13 @@
 
 /* Default width: 100%; takes up the whole navbar */
 .navbar-brand > img { width: 50px; }
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    background-color: black;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color: #F15A24;
+}
