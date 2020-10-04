@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
     `
     ;
     const msg = {
-        to: "chestercervantes13@gmail.com",
+        to: "dialedinwatchmaker@gmail.com",
         from: "hans43@ethereal.email",
         subject: 'Watchmaker - New Contact Request',
         html: output
